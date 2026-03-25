@@ -7,22 +7,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      const allowed = [process.env.CLIENT_URL, "http://localhost:3000"].map(
-        (u) => u && u.trim(),
-      );
-
-      if (!origin || allowed.includes(origin.trim())) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true,
-  }),
-);
+app.use(cors());
 app.use(express.json());
 
 // Routes

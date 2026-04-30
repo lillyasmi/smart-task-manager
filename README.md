@@ -64,7 +64,7 @@ smart-task-manager/
 
 - Node.js v18+
 - MongoDB (local or [MongoDB Atlas](https://www.mongodb.com/atlas))
-- Anthropic API Key — get one at [console.anthropic.com](https://console.anthropic.com)
+- OPENROUTER API KEY 
 
 ---
 
@@ -97,7 +97,7 @@ PORT=5000
 MONGO_URI=mongodb://localhost:27017/smart-task-manager
 JWT_SECRET=your_super_secret_jwt_key
 JWT_EXPIRES_IN=7d
-ANTHROPIC_API_KEY=sk-ant-your-key-here
+OPENROUTER_API_KEY=sk-ant-your-key-here
 CLIENT_URL=http://localhost:3000
 ```
 
@@ -195,6 +195,6 @@ App runs at: `http://localhost:3000`
 For production:
 - Set `NODE_ENV=production` in backend `.env`
 - Use [MongoDB Atlas](https://www.mongodb.com/atlas) for cloud database
-- Deploy backend to [Railway](https://railway.app) or [Render](https://render.com)
+- Deploy backend to  [Render](https://render.com)
 - Deploy frontend to [Vercel](https://vercel.com)
 - Update `NEXT_PUBLIC_API_URL` in frontend to your deployed backend URL
